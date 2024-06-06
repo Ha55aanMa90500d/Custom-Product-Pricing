@@ -1,0 +1,19 @@
+query RunInput {
+  cart {
+    lines {
+      id
+      quantity
+      attribute(key: "Custom-Price"){
+        value
+      }
+      merchandise{
+        ... on ProductVariant{
+          product{
+            title
+          }
+        }
+      }
+    }
+  }
+}
+ 
